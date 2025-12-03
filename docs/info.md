@@ -20,7 +20,7 @@ endmodule;
 Here AND is the operation performed on A, B, to get its output in Yd. Then Yd is passed through an inverter, and the output is obtained in Y. The compiler understands the AND and the NOT operation the same way we do. endmodule terminates the module.
 
 ## How to test
-
+Inputs|Outputs A|B|Y 0 0 1 0 1 1 1 0 1 1 1 0
 Refer to the truth table for NAND.
 
 ## External hardware
