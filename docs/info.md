@@ -23,7 +23,7 @@ Here AND is the operation performed on A, B, to get its output in Yd. Then Yd is
 
 NAND Truth table
 
-Inputs | Outputs A|B|Y 0 0 1 0 1 1 1 0 1 1 1 0
+Inputs | Outputs A | B |Y 0 0 1 0 1 1 1 0 1 1 1 0
 
 
 ## External hardware
