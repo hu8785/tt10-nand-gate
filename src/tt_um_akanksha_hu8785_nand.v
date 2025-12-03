@@ -15,13 +15,28 @@ module tt_um_akanksha_hu8785_nand (
     input  wire       clk,      // clock
     input  wire       rst_n     // reset_n - low to reset
 );
+    wire A = ui_in[0];
+    wire B = ui_in[1];
+    wire Yd;
+    wire Y;
 
-  // All output pins must be assigned. If not used, assign to 0.
-  assign uo_out  = ui_in + uio_in;  // Example: ou_out is the sum of ui_in and uio_in
-  assign uio_out = 0;
-  assign uio_oe  = 0;
+    // Logic implementation
+    and(Yd, A, B);
+    not(Y, Yd);
+    // Assign outputs
+    assign uo_out[0] = Y;
+    assign uo_out[1] = 1'b0;
+    assign uo_out[2] = 1'b0;
+    assign uo_out[3] = 1'b0;
+    assign uo_out[4] = 1'b0;
+    assign uo_out[5] = 1'b0;
+    assign uo_out[6] = 1'b0;
+    assign uo_out[7] = 1'b0;
 
-  // List all unused inputs to prevent warnings
-  wire _unused = &{ena, clk, rst_n, 1'b0};
+    assign uio_out = 0;
+    assign uio_oe  = 0;
 
+    // List all unused inputs to prevent warnings
+    wire _unused = &{ena, clk, rst_n, ui_in[7:2], uio_in, 1'b0};
 endmodule
+
